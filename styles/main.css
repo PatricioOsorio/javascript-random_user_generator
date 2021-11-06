@@ -1,0 +1,126 @@
+:root {
+  --font-main: 'Poppins', sans-serif;
+  --container-width: 1200px;
+  --radius: 10px;
+  --easeInOut: cubic-bezier(0.39, 0.57, 0.56, 1);
+  --success: #90ee90;
+  --danger: #f08080;
+
+  --background: #ececec;
+  --foreground-primary: #fafafa;
+  --foreground-secondary: #f0f0f0;
+  --text-color-thick: #1f1f1f;
+  --text-color-regular: #434343;
+  --text-color-thin: #676767;
+  --text-color-ultrathin: #8c8c8c;
+  --shadow-color: #e4e4e4;
+  --primary: #007aff;
+  --second: #50e3c2;
+  --primary-modal: #002752dc;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: var(--font-main);
+  color: var(--text-color-regular);
+  scroll-behavior: smooth;
+  background-image: url('../assets/img/back.jpg');
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+img {
+  max-width: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  width: 400px;
+  height: 500px;
+
+  margin-left: auto;
+  margin-right: auto;
+  background-color: var(--foreground-primary);
+  border-radius: var(--radius);
+
+  overflow: hidden;
+  background-color: transparent;
+}
+
+.card-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  height: 60%;
+
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+
+  color: #fff;
+
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.card-header picture {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.card-body {
+  padding: 2rem;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: start;
+  background-color: #fff;
+  height: 40%;
+  color: #000;
+}
+
+p > i {
+  padding-right: 0.5rem;
+}
+
+.button {
+  padding: 1rem;
+  color: #fff;
+
+  background: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid transparent;
+  border-radius: var(--radius);
+}
+
+.button:hover {
+  background: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: var(--radius);
+}
+
+.button:active {
+  color: #000;
+  background-color: #fff;
+}
+
+.btn-generate {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+}
